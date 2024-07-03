@@ -17,6 +17,7 @@ let package = Package(
                 dependencies: [
                     "openssl",
                 ],
+                path: "opensslWrapper",
                 resources: [.process("Resources/PrivacyInfo.xcprivacy")]
                ),
         .binaryTarget(
