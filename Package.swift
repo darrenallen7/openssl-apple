@@ -23,6 +23,6 @@ let package = Package(
         .binaryTarget(
             name: "openssl",
             url: "https://github.com/darrenallen7/openssl-apple/releases/download/3.2.107/openssl.xcframework.zip",
-            checksum: "065886c310d833bead5ed96d0bb8e7f6a05777ad2efd54b5cc90bb8e0cf35e4c")
+            checksum: "0d7668f73ae2017d37809f28bb63292b4f3191662b8c8e0679e0e9a9e27effe9")
     ]
 )
