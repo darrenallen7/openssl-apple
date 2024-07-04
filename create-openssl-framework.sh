@@ -198,9 +198,10 @@ for SYS in ${ALL_SYSTEMS[@]}; do
         fi
         cd $FWDIR
     
-        mkdir "Resources"
-        
-        cp "../../../PrivacyInfo.xcprivacy" "Resources"
+        cp "../../../PrivacyInfo.xcprivacy" ""
+#        mkdir "Resources"
+#        
+#        cp "../../../PrivacyInfo.xcprivacy" "Resources"
         
         cd ../../../
     fi
