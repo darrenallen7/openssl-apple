@@ -8,7 +8,7 @@ let package = Package(
     products: [
         .library(
             name: "openssl-apple",
-            targets: ["opensslWrapper"]),
+            targets: ["openssl", "opensslWrapper"]),
     ],
     dependencies: [
     ],
