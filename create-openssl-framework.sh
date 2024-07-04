@@ -19,6 +19,8 @@ fi
 #ALL_SYSTEMS=("iPhone" "AppleTV" "MacOSX" "Catalyst" "Watch")
 ALL_SYSTEMS=("iPhoneOS" "iPhoneSimulator" "AppleTVOS" "AppleTVSimulator" "MacOSX" "Catalyst" "WatchOS" "WatchSimulator" "XROS" "XRSimulator")
 
+#ALL_SYSTEMS=("iPhoneOS" "iPhoneSimulator")
+
 # Inspect Mach-O load commands to get minimum SDK version.
 #
 # Depending on the actual minimum SDK version it may look like this
@@ -188,6 +190,21 @@ rm bin/*/$FWNAME.dylib
 
 # macOS and Catalyst symlinks
 for SYS in ${ALL_SYSTEMS[@]}; do
+    if [[ $SYS == "iPhoneOS" || $SYS == "iPhoneSimulator" ]]; then
+        SYSDIR="$FWROOT/$SYS"
+        FWDIR="$SYSDIR/$FWNAME.framework"
+        if [[ ! -e "$FWDIR" ]]; then
+            continue
+        fi
+        cd $FWDIR
+    
+        mkdir "Resources"
+        
+        cp "../../../PrivacyInfo.xcprivacy" "Resources"
+        
+        ln -s "Resources"
+    fi
+
     if [[ $SYS == "MacOSX" || $SYS == "Catalyst" ]]; then
         SYSDIR="$FWROOT/$SYS"
         FWDIR="$SYSDIR/$FWNAME.framework"

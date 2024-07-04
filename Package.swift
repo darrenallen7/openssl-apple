@@ -8,18 +8,11 @@ let package = Package(
     products: [
         .library(
             name: "openssl-apple",
-            targets: ["openssl", "opensslWrapper"]),
+            targets: ["openssl"]),
     ],
     dependencies: [
     ],
     targets: [
-        .target(name: "opensslWrapper",
-                dependencies: [
-                    "openssl",
-                ],
-                path: "opensslWrapper",
-                resources: [.copy("PrivacyInfo.xcprivacy")]
-               ),
         .binaryTarget(
             name: "openssl",
             url: "https://github.com/darrenallen7/openssl-apple/releases/download/3.2.107/openssl.xcframework.zip",
