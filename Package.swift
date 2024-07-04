@@ -18,7 +18,7 @@ let package = Package(
                     "openssl",
                 ],
                 path: "opensslWrapper",
-                resources: [.copy("Resources/PrivacyInfo.xcprivacy")]
+                resources: [.copy("PrivacyInfo.xcprivacy")]
                ),
         .binaryTarget(
             name: "openssl",
