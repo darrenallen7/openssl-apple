@@ -202,7 +202,7 @@ for SYS in ${ALL_SYSTEMS[@]}; do
         
         cp "../../../PrivacyInfo.xcprivacy" "Resources"
         
-        ln -s "Resources"
+        cd ../../../
     fi
 
     if [[ $SYS == "MacOSX" || $SYS == "Catalyst" ]]; then
