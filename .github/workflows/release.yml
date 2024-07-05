@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - 'master'
-    paths:
-      - '.version'
 
 jobs:
   publish_binary_release:
